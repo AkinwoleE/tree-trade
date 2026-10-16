@@ -1,0 +1,253 @@
+{
+ "_note": "Server-side only. Internal/test accounts excluded from real-user stats. e2e scripts append automatically via scripts/lib/test-accounts.mjs.",
+ "accounts": [
+  {
+   "address": "0xadb693b4ae831f1cfcb9b1eb10e5ca8e7875c013e9cd1ed5c587720c4f84d3e9",
+   "label": "deployer"
+  },
+  {
+   "address": "0x9486110b7bd6e9d71cadf53759b20f17099bd13d21cee6b2813065ffa704f6d4",
+   "label": "hedger"
+  },
+  {
+   "address": "0x5044a0a1dbd13d10532c3e06bbc1af3040d515361c9d71946f11022c557b528b",
+   "label": "gas sponsor"
+  },
+  {
+   "address": "0x0121bd0e0109559db98830a79b7a89bf20ef591f21a921689d84f39703919535",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x063a5cb65c8517e3ae7a2f76a7f3675d0589e4cc4df10cc1ad8dfc0d87b74d02",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x06680acf4f5bac4fbb8735540e509b7b44187b29cd6503c4e04dc0e2590cf15c",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x07316de4429ec9620c49a165c9954483be1b87e57f8a30cd46b786df7b6bd3b3",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x1917b1eb4860f9887bba357af185259fef3f2fa0051072496b83a139909a4908",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x1b0f06744537f2e9e91d63cf40bae7ef59fa287e03a36d0301385cc2a98b7151",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x1d8892b836eaf80992921a641f834b10f8c5eaceebaf89e6d413bc79bc1f0878",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x23d2a1fbcf77ee670acabb07e3ff25d65990dda41a31c7e123a8fa59cc6a62b4",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x33e488afd24f1d4c4a340862a8aefbe93cd73f4cd16a66d387bb4ed6f296e3a1",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x489401b9f70743e11286b6b02e40765e347867c753ba4ef7f8b62abd8d7a20a3",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x4b88038a26dd234f3548f0bf8766e6ca303771dc3771b72a0ab386854175ba23",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x59dafa8eec07a9a4b97be1c86e9ae2967469eae45d0a4417e1fe15c1b4ec5f63",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x8f30ebe5b62cc728dcffb96f69ff9ebc59dc3424684b6d3f1d43e336d4d3bde6",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x959dfbc6fb1da9bd9a6019e7e9d7676fff99e52105fdf4e8c908671b1aed150c",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0x97bc889ae852640a3827c7fd886c6000e900975e6ab945145dca433d375d6e59",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0xa57d3ceb9fecaf8c661497be2478b0abe3de08f3444d205b626ab947cb25947b",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0xab29987b75095ebb34fc8a897dbb37e4677be33e4960cbf4795cc9495c2360fb",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0xc8679de7f9bb6508d4669cf459ea1968823dfb040e311967fb79201692fc0228",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0xd071729375fa2cb43da7f74fe8990fba6667b1b1803eb0fd86e2c859b0c37964",
+   "label": "e2e/verify fresh account (backfilled from logs + on-chain lifecycle)"
+  },
+  {
+   "address": "0xc5ba0c968a40bd6b5c8d3ebc813de600c3310695b78de318b52116cc834b5704",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-15T15:01:46.982Z"
+  },
+  {
+   "address": "0x9b171dc788654c525f7dd2632c68181de93eda6e680b96b557192f8c28d525bc",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-15T15:01:46.984Z"
+  },
+  {
+   "address": "0x18bf2acfd89f54cfe468741805373956b314e9052f4087896823afdc345139b0",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-15T15:01:46.985Z"
+  },
+  {
+   "address": "0xa1f17255bc5b65086d2fc206853ad9bde69f56bf56128b2e3d9b8bdbf5f48f90",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-15T15:02:02.156Z"
+  },
+  {
+   "address": "0x1b15b1b78d909f9fae5ced2078cff616937dbccd6bc3439038e6d6be7be9102d",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-15T15:02:02.160Z"
+  },
+  {
+   "address": "0x5a6f85dfc4e25d9dd7833d1872fe5a1d23184ddeb26eb1129d289a75cea97a0d",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-15T15:02:02.161Z"
+  },
+  {
+   "address": "0x9245810ab9d606be55bab3af9fd8c2eaaff9bbc90583f70667eeffc6044a3aca",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-15T15:02:13.640Z"
+  },
+  {
+   "address": "0x8b3784bf4ac6428ba16c8c438fddca6991477c277459c16e23c600ee7ec8781a",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-15T15:02:13.642Z"
+  },
+  {
+   "address": "0x703d4db299fcc8c06afef1f45d273e91514f7b926aecc7b3d2f8d09e632f286a",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-15T15:02:13.643Z"
+  },
+  {
+   "address": "0x31d295d5ea2392f2e0cd28becce00d1bd60f6531046b7b2e8df34dc63c78de0f",
+   "label": "e2e: e2e-hedge-leave-open.mjs",
+   "added": "2026-10-15T16:42:51.331Z"
+  },
+  {
+   "address": "0x4eba084e83b94e22b2caf6d18419efcbf76c5b5d637e14f623cbb69b3fb80353",
+   "label": "e2e: e2e-hedge-leave-open.mjs",
+   "added": "2026-10-15T16:42:51.334Z"
+  },
+  {
+   "address": "0xb34017ac277a5269203c0810b7157c36c7365a6b08fe2d7ebafe60e979bc77e0",
+   "label": "e2e: e2e-hedge-leave-open.mjs",
+   "added": "2026-10-15T16:43:21.277Z"
+  },
+  {
+   "address": "0x3dc716d719e518c3def426544cab1c1c01ea91efaff3f53af39546724133235c",
+   "label": "e2e: e2e-hedge-leave-open.mjs",
+   "added": "2026-10-15T16:43:21.279Z"
+  },
+  {
+   "address": "0x461a2b671e3568963fcd9480f278159373daeba0ed0cad717769d19c895cf4fe",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-16T04:51:19.444Z"
+  },
+  {
+   "address": "0xb490cb7b2b4b57c81a25a889ccfcccad5d304ba498a052e21db570b467241610",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-16T04:51:19.449Z"
+  },
+  {
+   "address": "0xbd55e7817dc574b90fd6b338a351d2d53830653ff6cf2ac5b913ba5989529ca7",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-16T04:51:19.450Z"
+  },
+  {
+   "address": "0x8cbf8a037e4c179c2d041e4602e62a1142290ce2ae51d7fc1343e518ec7fca0a",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-16T04:53:36.853Z"
+  },
+  {
+   "address": "0xfe81b237e681fbea718c3180b857a404e226844fa19631f53c65d20c6cd3dbbd",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-16T04:53:36.858Z"
+  },
+  {
+   "address": "0xbfb43adc450e3d1381f454ee7f32868616fa088b45c7bc039707fde72f6fa676",
+   "label": "e2e: e2e-v4.mjs",
+   "added": "2026-10-16T04:53:36.859Z"
+  },
+  {
+   "address": "0x3a0abebd5b3b0796333e3c54867e37112dd183d1c7210475edd617f73cfd5ea4",
+   "label": "e2e: oracle-e2e.ts",
+   "added": "2026-10-16T04:55:01.066Z"
+  },
+  {
+   "address": "0x5239fda8dc248863cf14c0add1268b99d191f11baf91583808966f6de9137c2c",
+   "label": "e2e: oracle-e2e.ts",
+   "added": "2026-10-16T04:55:11.871Z"
+  },
+  {
+   "address": "0xd57074d11a94fb5da5399d6a805655d82acc9f57e596f0689466789e52c82db1",
+   "label": "e2e: oracle-e2e.ts",
+   "added": "2026-10-16T04:55:24.406Z"
+  },
+  {
+   "address": "0x1e4516269c59bdba480eed77c4c858d1423015f058849bdac5942d5684469170",
+   "label": "e2e: e2e-liq-usage.mjs",
+   "added": "2026-10-16T04:56:09.927Z"
+  },
+  {
+   "address": "0x921853860284da515971e048d8fcbdcd153a01ba4e0269b534cd99ff098ffec7",
+   "label": "e2e: e2e-liq-usage.mjs",
+   "added": "2026-10-16T04:56:41.159Z"
+  },
+  {
+   "address": "0xb5dc0f9972b470a197d2a8605bd4849a6d7133726a95a05d2c37a121108eb86a",
+   "label": "e2e: e2e-liq-usage.mjs",
+   "added": "2026-10-16T04:56:50.549Z"
+  },
+  {
+   "address": "0xfbdaeef31c42b3fc6dfa9331604d5961fe097f7d262547e46081510f12150097",
+   "label": "e2e: e2e-liq-usage.mjs",
+   "added": "2026-10-16T04:57:38.378Z"
+  },
+  {
+   "address": "0x00d26947e56e760452b760b1127bfd71383d3535be879b06d002fbf818f9b857",
+   "label": "e2e: e2e-cost-cuts.mjs",
+   "added": "2026-10-16T05:17:54.275Z"
+  },
+  {
+   "address": "0x6f29b8012cbbb0471b4a1bfff58eb549a7a0b16c75db55829adc6793ac4b98dd",
+   "label": "e2e: e2e-cost-cuts.mjs",
+   "added": "2026-10-16T05:17:54.286Z"
+  },
+  {
+   "address": "0xba754612f5efd7ded13c274805789acec798d598eddaf850ba2c36039a31aeea",
+   "label": "e2e: e2e-cost-cuts.mjs",
+   "added": "2026-10-16T05:17:54.288Z"
+  },
+  {
+   "address": "0x3ffaaf72727472eb86a552d6b4703f5511dd852f59c05bc3b8553ed8925e3024",
+   "label": "e2e: e2e-cost-cuts.mjs",
+   "added": "2026-10-16T05:19:10.552Z"
+  },
+  {
+   "address": "0x94e7dabdced1a8305a928dcca6d57b527d06860f031b6ce03927968756dc5e65",
+   "label": "e2e: e2e-cost-cuts.mjs",
+   "added": "2026-10-16T05:19:10.560Z"
+  },
+  {
+   "address": "0x9f826d876fdcf9fb805e1cc6c38d1444bd49c274e174a237074fd90723d1f490",
+   "label": "e2e: e2e-cost-cuts.mjs",
+   "added": "2026-10-16T05:19:10.561Z"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "treetrade-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aptos-labs/derived-wallet-ethereum": "^0.9.2",
+    "@aptos-labs/derived-wallet-solana": "^0.12.2",
+    "@aptos-labs/ts-sdk": "^5.2.1",
+    "@aptos-labs/wallet-adapter-react": "^8.3.3",
+    "lightweight-charts": "^5.2.1",
+    "next": "^16.4.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "viem": "^2.57.7",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^20.19.43",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "^8.18.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  }
+}

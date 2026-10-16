@@ -1,0 +1,17 @@
+[package]
+name = "papertrade"
+version = "0.1.0"
+authors = []
+
+[addresses]
+papertrade = "_"
+
+[dev-addresses]
+papertrade = "0xCAFE"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]

@@ -1,0 +1,25 @@
+{
+  "name": "treetrade-keeper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dry-run": "tsx src/index.ts --dry-run",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/hedge/*.test.ts src/oracle-median.test.ts",
+    "hedger": "tsx src/hedge/hedger.ts",
+    "probe": "tsx src/hedge/probe.ts"
+  },
+  "dependencies": {
+    "@aptos-labs/ts-sdk": "^7.5.0",
+    "@decibeltrade/sdk": "^0.8.2",
+    "yaml": "^2.9.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

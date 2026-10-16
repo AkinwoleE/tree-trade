@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/*
+ * Tree Trade warm "paper" theme. The components use Tailwind's zinc/indigo/emerald/rose/amber
+ * utilities; the scales are remapped here (dark→light) so the whole app switches theme in one place.
+ */
+@theme {
+  --color-zinc-50: #0f0e0c;
+  --color-zinc-100: #1c1a17;
+  --color-zinc-200: #2b2620;
+  --color-zinc-300: #3d372d;
+  --color-zinc-400: #5f5748;
+  --color-zinc-500: #7d7362;
+  --color-zinc-600: #a89c86;
+  --color-zinc-700: #d6c9b0;
+  --color-zinc-800: #e3d8c3;
+  --color-zinc-900: #faf5ea;
+  --color-zinc-950: #f4ecdc;
+
+  /* APTree green replaces indigo as the accent */
+  --color-indigo-300: #3c8050;
+  --color-indigo-400: #2f6b3f;
+  --color-indigo-500: #2f6b3f;
+  --color-indigo-600: #2f6b3f;
+  --color-indigo-700: #8fb59a;
+  --color-indigo-950: #e3eedf;
+
+  --color-emerald-300: #2a6d45;
+  --color-emerald-400: #2f7d4f;
+  --color-emerald-500: #3a8d5c;
+  --color-emerald-600: #2f7d4f;
+  --color-emerald-700: #9cc7a9;
+  --color-emerald-950: #e2efe3;
+
+  --color-rose-300: #8f2a25;
+  --color-rose-400: #a3302a;
+  --color-rose-500: #b83a33;
+  --color-rose-600: #a3302a;
+  --color-rose-700: #dba7a2;
+  --color-rose-950: #f6e1dd;
+
+  --color-amber-200: #6f4a0d;
+  --color-amber-300: #8a5a10;
+  --color-amber-400: #a86a12;
+  --color-amber-500: #b7791f;
+  --color-amber-700: #e0c48f;
+  --color-amber-950: #f7ead0;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-zinc-950 text-zinc-100 antialiased;
+}
+
+.card {
+  @apply rounded-xl border border-zinc-800 bg-zinc-900 p-4;
+}
+
+.btn {
+  @apply rounded-lg px-3 py-2 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-40;
+}
+.bg-emerald-600, .bg-rose-600, .bg-indigo-600, .btn-primary { color: #fffaf0; }
+
+.btn-primary {
+  @apply bg-indigo-600 hover:bg-indigo-500;
+}
+
+.btn-ghost {
+  @apply border border-zinc-700 hover:bg-zinc-800;
+}
+
+.input {
+  @apply w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm outline-none focus:border-indigo-500;
+}
+
+.label {
+  @apply text-xs uppercase tracking-wide text-zinc-500;
+}
+
+/* faint repeating ticker watermark behind the position tabs */
+.ticker-watermark {
+  background-image: repeating-linear-gradient(90deg, transparent 0 0);
+  position: relative;
+}
+.ticker-watermark::before {
+  content: "TREETRADE · TREETRADE · TREETRADE · TREETRADE · TREETRADE · TREETRADE · TREETRADE · TREETRADE · TREETRADE · TREETRADE";
+  position: absolute; inset: 0; overflow: hidden; white-space: nowrap; pointer-events: none;
+  font: 600 11px/2.6 ui-monospace, monospace; letter-spacing: .3em; color: rgba(28, 26, 23, 0.05);
+}
+
+/*
+ * Dark mode — APTree palette (aptree.io `.dark` CSS variables; see THEME.md).
+ * Same remapping trick as above: zinc is the neutral scale (50 = strongest text … 950 = page bg).
+ */
+html.dark {
+  color-scheme: dark;
+  --color-zinc-50: #ffffff;
+  --color-zinc-100: #f0fdf4;   /* --foreground */
+  --color-zinc-200: #d6e6da;
+  --color-zinc-300: #b4c6b9;
+  --color-zinc-400: #9ca3af;   /* --muted-foreground */
+  --color-zinc-500: #84918a;
+  --color-zinc-600: #5d6e63;
+  --color-zinc-700: #24402c;   /* input borders (≈ --border on card) */
+  --color-zinc-800: #1a2e1a;   /* --secondary / --muted / --accent: borders, hovers */
+  --color-zinc-900: #061408;   /* --card / --popover */
+  --color-zinc-950: #0a0f0a;   /* --background */
+
+  --color-indigo-300: #a7f3d0;
+  --color-indigo-400: #6ee7b7; /* --accent-1 */
+  --color-indigo-500: #4ade80; /* --primary */
+  --color-indigo-600: #22c55e; /* --primary-dark */
+  --color-indigo-700: #166534;
+  --color-indigo-950: #0f2a1a;
+
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399; /* --accent-2 */
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #065f46;
+  --color-emerald-950: #052e1f;
+
+  --color-rose-300: #fca5a5;
+  --color-rose-400: #f87171;
+  --color-rose-500: #ef4444;   /* --error */
+  --color-rose-600: #dc2626;   /* --destructive */
+  --color-rose-700: #7f1d1d;
+  --color-rose-950: #2a0f0f;
+
+  --color-amber-200: #fde68a;
+  --color-amber-300: #fcd34d;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  --color-amber-700: #78350f;
+  --color-amber-950: #2a1d07;
+}
+html.dark .bg-indigo-600, html.dark .btn-primary { color: #0a0f0a; } /* --primary-foreground */
+html.dark .bg-emerald-600, html.dark .bg-rose-600 { color: #f0fdf4; }
+html.dark .ticker-watermark::before { color: rgba(110, 231, 183, 0.05); }
+html.dark .bg-black\/20 { background-color: rgba(0, 0, 0, 0.6); }
