@@ -45,7 +45,7 @@ export default function Docs() {
         </S>
         <S id="trades" title="Trades and pricing">
           <p>Every open and close fills at a fresh signed mid price (see <a className="underline" href="#oracle">Prices and the oracle</a>); size does not move it.</p>
-          <p>Positions are $1,000 to $10,000,000 in size (margin × leverage). Each market has independent long and short open-interest caps in asset quantity; a keeper keeps each side&apos;s cap at current open interest plus about $1B of room, rebuilding it when the room leaves the $900M–$1.1B band. An open over a side&apos;s cap is rejected.</p>
+          <p>Positions are $1,000 to $10,000,000 in size (margin × leverage). Each market has independent long and short open-interest caps in asset quantity; a keeper keeps each side&apos;s cap at current open interest plus about $7.5M of room (sized to market depth), rebuilding it when the room leaves the $6.75M–$8.25M band. If the keeper stops updating the caps for 15 minutes, each market falls back to a fixed $20M open-interest cap. An open over a side&apos;s cap is rejected.</p>
         </S>
         <S id="oracle" title="Prices and the oracle">
           <p><b>Each trade carries its own price.</b> When you open or close, the Tree Trade server signs the current BTC or ETH mid price with a dedicated price-signing key, and your transaction carries that signed price. The contract checks the signature and rejects any price more than 10 seconds old (or more than 3 seconds in the future), so a trade always fills at a price under 10 seconds old, never at an older stored price.</p>

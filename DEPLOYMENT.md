@@ -229,3 +229,14 @@ Hourly `usage[keeper]` / `usage[hedger]` lines in `keeper.log` (first after 15 m
 - **/api/sponsor**: submit retries on 429 with exponential backoff and full jitter (4 tries, ≤5 s total, honours Retry-After). The resubmit is idempotent.
   The client (`postSponsor` in `lib/hooks.ts`) also retries 429s from the route. This covers faucet, deposit, trade and every other sponsored tx.
 - Prod check script: `web/scripts/e2e-cost-cuts.mjs` (fresh accounts are auto-added to `internal-accounts.json`).
+
+## Live UI prices (2026-10-20)
+
+- The ticker and Tick chart stream straight from the browser to free public market-data WebSockets (no key):
+  Binance mirror `wss://data-stream.binance.vision` (`<sym>usdt@bookTicker`, converted to USD with `usdcusdt@bookTicker`),
+  Coinbase Exchange `wss://ws-feed.exchange.coinbase.com` (`ticker`), Kraken `wss://ws.kraken.com/v2` (`ticker`, `event_trigger: bbo`).
+  Code: `web/src/lib/price-feeds.ts` (median, then mean of feeds within 15 bp of it; 200 ms throttle; per-socket backoff 1→30 s with jitter).
+- Fallback: `/api/stream` (SSE) opens only after 5 s with no WebSocket tick; `/api/prices` polls only if both are down.
+- Hidden tabs close every socket. The UI shows only a generic LIVE badge, never a venue name.
+- Display only. Trades still use the signed `/api/price-sig` price and the keeper's on-chain price. If the stream is more than 0.3%
+  away from the latest signed price (30 s) or a fresh on-chain price (90 s), the UI shows that trusted price instead (`web/src/lib/price-anchor.ts`).

@@ -16,15 +16,17 @@ import {
   USDC_DECIMALS,
   VIEW,
   fn,
+  marketSymbol,
   type MarketSymbol,
 } from "@/config/contract";
+import { setAnchor } from "@/lib/price-anchor";
 import { type PriceQuote } from "@/lib/prices";
 import { decodePosition, fromUnits, type Position } from "@/lib/positions";
 import { aptos, explorerTx, view } from "@/lib/chain";
 import { loadSession, clearSession, sessionAccount, type Session } from "@/lib/session";
 
 /** Live prices from our server route (Decibel when a key is configured, else a public market feed). */
-/** Fallback poll only: the app streams prices over SSE (/api/stream); this runs only while the stream is stale. */
+/** Fallback poll only: the app streams prices (browser WebSockets, then SSE); this runs only while the stream is stale. */
 export function usePrices(intervalMs = 15_000, enabled = true) {
   const source = useMemo(
     () => ({
@@ -337,6 +339,8 @@ async function signedPriceArgs(entry: string, args: unknown[]): Promise<unknown[
   const r = await fetch(`/api/price-sig?market=${market}`, { cache: "no-store" });
   const j = await r.json().catch(() => ({}));
   if (!r.ok || !j.signature) throw new Error(j.error ?? `price ${r.status}`);
+  const sym = marketSymbol(market);
+  if (sym) setAnchor(sym, Number(j.price) / 10 ** PRICE_DECIMALS, Number(j.publishTime) * 1000, "signed"); // display guard only
   // vector<u8>: pass bytes (a hex string would be encoded as UTF-8).
   return [j.price, j.publishTime, Hex.fromHexInput(j.signature).toUint8Array()];
 }
