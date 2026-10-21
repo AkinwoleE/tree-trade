@@ -6,6 +6,8 @@ cd "$(dirname "$0")"
 child=
 trap '[ -n "$child" ] && kill "$child" 2>/dev/null; wait "$child" 2>/dev/null; exit 0' TERM INT
 while true; do
+  # Self-heal: a box reset can wipe node_modules; reinstall from the lockfile.
+  [ -x ./node_modules/.bin/tsx ] || { echo "$(date -Is) run-hedger.sh: node_modules missing, running npm ci"; npm ci --no-audit --no-fund || true; }
   echo "$(date -Is) run-hedger.sh: starting hedger"
   ./node_modules/.bin/tsx src/hedge/hedger.ts "$@" &
   child=$!
